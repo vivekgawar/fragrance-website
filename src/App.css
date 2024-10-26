@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.app-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .background-model {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it's behind the content */
   }
-  to {
-    transform: rotate(360deg);
+  
+  .spline-iframe {
+    width: 100vw;
+    height: 100vh;
+    border: none;
   }
-}
+  
+  .container {
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background-color: #D4BEE4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    z-index: 1; /* Keep the container above the model */
+  }
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; /* To ensure a clean background */
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .select-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .dropdown-label {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .dropdown {
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .submit-button {
+    padding: 0.8rem;
+    font-size: 1rem;
+    background-color: #3B1E54;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #45A049;
+  }
+  
+  /* Recommendation Card Styling */
+  .recommendations {
+    margin-top: 2rem;
+  }
+  
+  .recommendation-card {
+    padding: 1rem;
+    background-color: #F9ED69;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+  }
+  
+  .perfume-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .perfume-notes {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
